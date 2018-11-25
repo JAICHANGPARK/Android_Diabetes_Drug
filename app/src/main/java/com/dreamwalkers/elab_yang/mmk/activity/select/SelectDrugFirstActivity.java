@@ -26,12 +26,15 @@ import com.dreamwalkers.elab_yang.mmk.activity.IActivityBased;
 import com.dreamwalkers.elab_yang.mmk.adapter.appinfo.TimePointAdapter;
 import com.dreamwalkers.elab_yang.mmk.model.Imsi;
 import com.dreamwalkers.elab_yang.mmk.model.TimePoint;
+import com.dreamwalkers.elab_yang.mmk.model.needle.Drug;
+import com.dreamwalkers.elab_yang.mmk.model.needle.Insulin;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.paperdb.Paper;
 
 public class SelectDrugFirstActivity extends AppCompatActivity implements IActivityBased, TimePointAdapter.TimePointClickListener {
     private static final String TAG = "SelectDrugFirstActivity";
@@ -116,6 +119,7 @@ public class SelectDrugFirstActivity extends AppCompatActivity implements IActiv
         anim();
         setSupportActionBar(myToolbar);
         imsi = (Imsi) getApplication();
+        Paper.init(this);
     }
 
     public void setRecyclerview() {
@@ -221,23 +225,38 @@ public class SelectDrugFirstActivity extends AppCompatActivity implements IActiv
                 // 3페
 //                if (cnt == 2) {
                 if (cnt == 1) {
+                    ArrayList<Drug> drugArrayList = new ArrayList<>();
+                    ArrayList<Insulin> insulinArrayList = new ArrayList<>();
                     Snackbar.make(getWindow().getDecorView().getRootView(), "저장", Snackbar.LENGTH_SHORT).show();
-                    String message = "";
+                    StringBuilder message = new StringBuilder();
                     Log.d(TAG, "onOptionsItemSelected: timepoints.size() = " + timepoints.size());
                     // 리스트 갯수만큼 반복
+
                     for (int i = 0; i < timepoints.size(); i++) {
 //                        set_data[i] = timepoints.get(i).getTimepoint() + "/" + timepoints.get(i).getName() + "/" + timepoints.get(i).getUnit() + "\n";
-                        set_data[i] = timepoints.get(i).getTimepoint() + "/" + timepoints.get(i).getName() + "/" + timepoints.get(i).getUnit() + "\n";
+//                        set_data[i] = timepoints.get(i).getTimepoint() + "/" + timepoints.get(i).getName() + "/" + timepoints.get(i).getUnit() + "\n";
                         Log.d(TAG, "onOptionsItemSelected: set_data[i] = " + set_data[i]);
-                        message += set_data[i];
+//                        message.append(set_data[i]);
+                        if (timepoints.get(i).getName() == null && timepoints.get(i).getUnit() == null) {
+                            insulinArrayList.add(new Insulin("", "", ""));
+                            break;
+                        } else {
+                            insulinArrayList.add(new Insulin("", timepoints.get(i).getName(), timepoints.get(i).getUnit()));
+                        }
                     }
 
+                    for (int i = 0; i < timepoints.size(); i++) {
+                        drugArrayList.add(new Drug(timepoints.get(i).getTimepoint(), insulinArrayList));
+                    }
+
+
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    String finalMessage = message;
-                    builder.setTitle("title. 최종 확인")
-                            .setMessage("message. 최종 확인" + message)
+                    String finalMessage = message.toString();
+                    builder.setTitle("알림")
+                            .setMessage("투약 정보를 저장하시겠어요?" + message)
                             .setPositiveButton("yes",
                                     (dialog, id) -> {
+                                        Paper.book().write("user_drug", drugArrayList);
                                         SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
                                         SharedPreferences.Editor editor = pref.edit();
                                         editor.putString("setData", finalMessage);

@@ -49,7 +49,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         RelativeLayout layout = holder.layout;
 
         ImageView image = holder.image;
-        ImageView image2 = holder.image2;
+//        ImageView image2 = holder.image2;
 
         TextView time = holder.time;
         TextView kind = holder.kind;
@@ -65,7 +65,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         holder.unit.setText(item.getUnit());
 //        holder.state.setText(item.getState());
 
-        holder.image2.setImageResource(item.getImage2());
+//        holder.image2.setImageResource(item.getImage2());
 //        holder.speed.setText(item.getSpeed());
 //        holder.distance.setText(item.getDistance());
 //        holder.bpm.setText(item.getBpm());
@@ -119,7 +119,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
             layout = (RelativeLayout) itemView.findViewById(R.id.layout);
             //
             image = (ImageView) itemView.findViewById(R.id.image);
-            image2 = (ImageView) itemView.findViewById(R.id.image2);
+//            image2 = (ImageView) itemView.findViewById(R.id.image2);
             time = (TextView) itemView.findViewById(R.id.time);
 //            kind = (TextView) itemView.findViewById(R.id.kind);
             name = (TextView) itemView.findViewById(R.id.name);

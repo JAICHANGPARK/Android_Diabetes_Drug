@@ -26,8 +26,8 @@ import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentA;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentB;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentC;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentD;
+import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentE;
 import com.dreamwalkers.elab_yang.mmk.activity.navi.EduYoutubeActivity;
-import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugFirstActivity;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerAdapter;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerItem;
 import com.dreamwalkers.elab_yang.mmk.menu.SimpleItem;
@@ -39,6 +39,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import es.dmoral.toasty.Toasty;
 import eu.long1.spacetablayout.SpaceTabLayout;
 import io.paperdb.Paper;
 
@@ -84,6 +85,7 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 .inject();
 
         TextView textView = slidingRootNav.getLayout().findViewById(R.id.welcome_text_view);
+
         textView.setText("좋은아침입니다.");
 
         screenIcons = loadScreenIcons();
@@ -112,6 +114,7 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
         ButterKnife.bind(this);
         setStatusbar();
         setTapLayout();
+        Toasty.Config.getInstance().apply();
     }
 
     @Override
@@ -129,8 +132,9 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
             // TODO: 2018-11-19 인슐린 설정은 여기서 ㄱㄱㄱㄱㄱㄱㄱ
             case POS_MESSAGES: //액세서리
-                Log.d(TAG, "onItemSelected: POS_MESSAGES");
-                startActivity(new Intent(this, SelectDrugFirstActivity.class));
+                Toasty.warning(this, "준비중..", Toast.LENGTH_SHORT).show();
+//                Log.d(TAG, "onItemSelected: POS_MESSAGES");
+//                startActivity(new Intent(this, SelectDrugFirstActivity.class));
                 break;
 
             case POS_CART: //교육
@@ -199,10 +203,13 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
         List<android.support.v4.app.Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new FragmentA());  // = 기록보기
         fragmentList.add(new FragmentB());  // 캘린더
+        fragmentList.add(new FragmentE());  // 투약 설정 기록
         fragmentList.add(new FragmentC());  // 장치 관리 + 동기화
         fragmentList.add(new FragmentD());  // 프로필
 
         tabLayout.initialize(viewPager, getSupportFragmentManager(), fragmentList, null);
+        tabLayout.setTabFourIcon(R.drawable.ic_devices_other_white_24dp);
+        tabLayout.setTabFiveIcon(R.drawable.ic_person_white_24dp);
 
         tabLayout.setTabOneOnClickListener(v -> {
 //            Snackbar.make(coordinatorLayout, "Welcome to SpaceTabLayout", Snackbar.LENGTH_SHORT).show();

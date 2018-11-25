@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -37,6 +38,7 @@
                 android:weightSum="2">
 
                 <TextView
+
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -47,6 +49,7 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLines="1"
                     android:id="@+id/user_name"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -77,6 +80,8 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLength="3"
+                    android:maxLines="1"
                     android:id="@+id/user_age"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -97,6 +102,7 @@
                 android:weightSum="2">
 
                 <TextView
+                    android:maxLines="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -107,6 +113,8 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLength="3"
+                    android:maxLines="1"
                     android:id="@+id/user_blood_max"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -137,6 +145,8 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLength="3"
+                    android:maxLines="1"
                     android:id="@+id/user_blood_min"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -167,6 +177,8 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLength="3"
+                    android:maxLines="1"
                     android:id="@+id/user_weight"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -197,6 +209,8 @@
                     android:textSize="20sp" />
 
                 <EditText
+                    android:maxLength="3"
+                    android:maxLines="1"
                     android:id="@+id/user_height"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
