@@ -37,7 +37,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/girl_profile"
+            android:src="@mipmap/ic_launcher_2_round"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,7 +60,7 @@
                 android:layout_margin="4dp"
                 android:fontFamily="@font/my_font_family"
                 android:gravity="center_horizontal|center_vertical"
-                android:hint="땡땡땡님"
+                android:hint="박제창님"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 

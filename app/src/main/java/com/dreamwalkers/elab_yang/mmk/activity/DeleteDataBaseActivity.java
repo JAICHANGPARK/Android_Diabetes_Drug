@@ -61,8 +61,8 @@ public class DeleteDataBaseActivity extends AppCompatActivity implements IActivi
         Log.d(TAG, "onClick: 삭제 버튼 클릭");
         // 다이얼로그
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("진짜루")
-                .setMessage("저장된 내용을 전부 지울까요?")
+        builder.setTitle("경고")
+                .setMessage("저장된 내용이 전부 삭제됩니다.")
                 .setPositiveButton("네", (dialog, which) -> {
                     // DB삭제
                     Log.d(TAG, "onClick: db 클리어;;;");

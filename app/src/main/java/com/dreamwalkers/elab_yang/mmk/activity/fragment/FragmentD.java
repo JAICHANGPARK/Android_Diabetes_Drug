@@ -36,6 +36,7 @@ import com.dreamwalkers.elab_yang.mmk.model.Profile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -64,7 +65,7 @@ public class FragmentD extends Fragment implements ProfileAdapter.ProfileClickLi
         List<Profile> profiles = new ArrayList<>();
 
         // read cache data
-        SharedPreferences pref = this.getActivity().getSharedPreferences("pref", MODE_PRIVATE);
+        SharedPreferences pref = Objects.requireNonNull(this.getActivity()).getSharedPreferences("pref", MODE_PRIVATE);
 
         // 떙떙땡님 반갑습니다.
         if (pref.getString("user_data0", "").equals("")) {
@@ -72,12 +73,13 @@ public class FragmentD extends Fragment implements ProfileAdapter.ProfileClickLi
 
         } else {
             Log.d(TAG, "setAdapter: 띠용 ");
-            if (pref.getString("user_data0", "") == null){
-                textView.setText("");
-            }else {
-                textView.setText(pref.getString("user_data0", ""));
-            }
-           
+//            if (pref.getString("user_data0", "") == null){
+//                textView.setText("");
+//            }else {
+//                textView.setText(pref.getString("user_data0", ""));
+//            }
+//            textView.setText("나당뇨");
+
         }
 
         // 1

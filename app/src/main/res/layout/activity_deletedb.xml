@@ -13,7 +13,7 @@
         android:layout_marginTop="0dp"
         android:fontFamily="@font/my_font_family"
         android:gravity="center_vertical|center_horizontal"
-        android:text="다시한번생각하고왕"
+        android:text="모든 정보를 삭제합니다."
         android:textColor="@color/red"
         android:textSize="30sp" />
 
