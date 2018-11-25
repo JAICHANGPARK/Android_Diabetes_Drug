@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--네비게이션메뉴-->
+    <style name="AppTheme.AppBarOverlay" parent="android:Theme.Holo.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="android:style/Theme" >-->
+    <!--<item name="android:tabWidgetStyle">@style/Widget.TabWidget</item>-->
+    <!--</style>-->
+
+    <!--<style name="Widget.TabWidget" parent="android:Theme">-->
+    <!--<item name="android:tabStripEnabled">false</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ClickableImageView">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+    </style>
+
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.MaterialHome" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+    </style>
+
+    <style name="LinearLayout">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

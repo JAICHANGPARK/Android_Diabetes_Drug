@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!--싱글-->
+    <group android:checkableBehavior="single">
+        <!--호구조사-->
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="호구조사" />
+
+        <!--내 설정값 보기-->
+        <item
+            android:id="@+id/nav_view_insulin"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="내 설정값 보기" />
+    </group>
+
+    <!--메인-->
+    <item
+        android:title="메인">
+        <menu>
+            <!--투약 설정-->
+            <item
+                android:icon="@drawable/ic_check_black_24dp"
+                android:id="@+id/nav_set_insulin"
+                android:title="투약 설정" />
+
+            <!--장치 추가-->
+            <item
+                android:icon="@drawable/ic_add_black_24dp"
+                android:id="@+id/nav_add_device"
+                android:title="장치 추가" />
+
+            <!--투약 기록 보기-->
+            <item
+                android:icon="@drawable/ic_storage_black_24dp"
+                android:id="@+id/nav_view_database"
+                android:title="투약 기록 보기" />
+        </menu>
+    </item>
+
+    <!--서브 : 참고 자료-->
+    <item
+        android:title="참고 자료">
+        <menu>
+            <!--교육앱-->
+            <item
+                android:id="@+id/nav_education"
+                android:icon="@drawable/ic_computer_black_24dp"
+                android:title="교육 영상" />
+        </menu>
+    </item>
+
+    <!--설정-->
+    <item
+        android:title="환경설정">
+        <menu>
+            <!--환경설정-->
+            <item
+                android:id="@+id/nav_edit_profile"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="환경설정" />
+
+            <!--&lt;!&ndash;모든 기록 삭제&ndash;&gt;-->
+            <!--<item-->
+                <!--android:icon="@drawable/ic_delete_forever_black_24dp"-->
+                <!--android:id="@+id/nav_delete_database"-->
+                <!--android:title="모든 기록 삭제" />-->
+
+            <!--&lt;!&ndash;개발자 정보&ndash;&gt;-->
+            <!--<item-->
+                <!--android:icon="@drawable/ic_error_outline_black_24dp"-->
+                <!--android:id="@+id/nav_its_me"-->
+                <!--android:title="개발자 정보" />-->
+        </menu>
+    </item>
+</menu>

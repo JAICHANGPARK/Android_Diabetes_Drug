@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="1단위 입력"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/edit1"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="2단위 입력"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/button_dialog_submit"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/edit2"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="투약상태" />
+
+</RelativeLayout>

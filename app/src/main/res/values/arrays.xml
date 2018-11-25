@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Dashboard</item>
+        <item>내 정보</item>
+        <item>액세서리</item>
+        <item>교육 영상</item>
+        <item>환경 설정</item>
+        <item />
+        <item>종료하기</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_account_box_black_24dp</item>
+        <item>@drawable/ic_devices_other_black_24dp</item>
+        <item>@drawable/ic_computer_black_24dp</item>
+        <item>@drawable/ic_settings_black_24dp</item>
+        <item>0</item>
+        <item>@drawable/ic_clear_black_24dp</item>
+    </array>
+
+</resources>

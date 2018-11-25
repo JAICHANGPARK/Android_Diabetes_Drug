@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!--<CalendarView-->
+    <!--android:id="@+id/expandable_calendar_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonLeft_drawableTintColor="@android:color/white"
+        app:buttonRight_drawableTintColor="@android:color/white"
+        app:expandIconColor="@android:color/white"
+        app:primaryColor="@color/google_red"
+        app:selectedItem_background="@drawable/circle_white_solid_background"
+        app:selectedItem_textColor="@color/google_red"
+        app:textColor="@color/white"
+        app:todayItem_background="@drawable/circle_white_stroke_background"
+        app:todayItem_textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView"
+        android:background="@color/lime"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/black" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/ella_tapbar"
+        android:layout_below="@+id/textview" />
+
+</RelativeLayout>

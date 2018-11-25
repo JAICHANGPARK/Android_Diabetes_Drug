@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="경구할당제 설정"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/my_font_family"
+        android:text="선택해주세요"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="설포닐우레아"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox1"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="바이구아니드"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox2"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="알파-글루코시다아제 억제제"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox3"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="티아졸리디네디온"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox4"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="메글리티니드"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox5"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="글리뷰라이드와 메토포민 혼합"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <CheckBox
+        android:layout_marginTop="16dp"
+        android:id="@+id/checkbox7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox6"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/my_font_family"
+        android:text="DDP-4억제제"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/set_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox7"
+        android:fontFamily="@font/my_font_family"
+        android:text="저장할게유"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+</RelativeLayout>

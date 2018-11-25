@@ -1,0 +1,97 @@
+<!--
+  ~ Copyright (c) 2016 Lung Razvan
+  ~
+  ~     Licensed under the Apache License, Version 2.0 (the "License");
+  ~     you may not use this file except in compliance with the License.
+  ~     You may obtain a copy of the License at
+  ~
+  ~        http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~     Unless required by applicable law or agreed to in writing, software
+  ~     distributed under the License is distributed on an "AS IS" BASIS,
+  ~     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~     See the License for the specific language governing permissions and
+  ~     limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--android:fillViewport="true"-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/normallayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/ella_tapbar"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="149dp"
+            android:layout_height="145dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/girl_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="땡땡땡님"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="반갑습니다"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="333dp"
+            android:layout_height="370dp"
+            android:layout_alignStart="@+id/normallayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/ella_tapbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

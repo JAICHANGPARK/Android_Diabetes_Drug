@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/my_font_family"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="1. 투약 설정
+2. 장치 추가
+3. 연결
+4. 데이터 확인"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+</android.support.constraint.ConstraintLayout>

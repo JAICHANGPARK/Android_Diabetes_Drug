@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
+
+    <!--1번 레이아웃-->
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="1. 투약 시점"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/title_line1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/title1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/sub1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_line1"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"
+                android:text="사용하시는 투약 시점을 선택해주세요"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sub1"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="공복"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="점심식전"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="저녁식전"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="취침전"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--2번 레이아웃-->
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="2. 품명 선택"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="3. 단위 선택"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/title_line3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/title3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/black"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/title_line2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/title2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/sub2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_line2"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"
+                android:text="사용하시는 품명을 선택해주세요"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/sub3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_line3"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4dp"
+                android:text="사용하시는 인슐린의 단위를 선택해주세요"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:visibility="invisible" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sub2" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
