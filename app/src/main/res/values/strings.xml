@@ -1,7 +1,7 @@
 <resources>
     <!--앱 이름-->
     <!--니들 우리들 모두들 꿈과 희망을...-->
-    <string name="app_name">대한민국의 어머니들</string>
+    <string name="app_name">당뇨그루-드러그</string>
 
     <!--툴바 타이틀-->
     <string name="scan_device">Scan Device</string>
@@ -13,7 +13,7 @@
 
     <!--권한허용 부탁 다이얼로그-->
     <string name="permission_plz_title">권한 요청</string>
-    <string name="permission_plz_content">위치 권한을 허용해주세욥!</string>
+    <string name="permission_plz_content">위치 권한을 허용해주세요</string>
 
     <!--BLE DEVICE NAME-->
     <string name="ble_device_name">NeedleBT</string>
@@ -26,7 +26,7 @@
     <string name="promise_next_time">다음 기회에</string>
     <!--Scan-->
     <string name="scan">Scan</string>
-    <string name="page1_title">대한민국의 어머니들</string>
+    <string name="page1_title">당뇨그루-드러그</string>
 
 
     <!--블루투스-->

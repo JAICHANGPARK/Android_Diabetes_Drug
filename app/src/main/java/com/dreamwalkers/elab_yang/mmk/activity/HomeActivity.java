@@ -57,6 +57,7 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private static final int POS_ACCOUNT = 1;  // 내정보
     private static final int POS_MESSAGES = 2;  // 액세사리
     private static final int POS_CART = 3;  // 교육영상
+    private static final int POS_SETTING = 4;  // 교육영상
     private static final int POS_LOGOUT = 6;  // 종료하기
 
     private String[] screenTitles;
@@ -91,6 +92,7 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 createItemFor(POS_ACCOUNT),
                 createItemFor(POS_MESSAGES),
                 createItemFor(POS_CART),
+                createItemFor(POS_SETTING),
                 new SpaceItem(48),
                 createItemFor(POS_LOGOUT)));
         adapter.setListener(this);
