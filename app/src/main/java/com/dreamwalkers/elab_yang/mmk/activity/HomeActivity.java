@@ -26,6 +26,8 @@ import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentA;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentB;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentC;
 import com.dreamwalkers.elab_yang.mmk.activity.fragment.FragmentD;
+import com.dreamwalkers.elab_yang.mmk.activity.navi.EduYoutubeActivity;
+import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugFirstActivity;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerAdapter;
 import com.dreamwalkers.elab_yang.mmk.menu.DrawerItem;
 import com.dreamwalkers.elab_yang.mmk.menu.SimpleItem;
@@ -120,15 +122,25 @@ public class HomeActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 Log.d(TAG, "onItemSelected: POS_DASHBOARD");
                 break;
 
-            case POS_ACCOUNT:
+            case POS_ACCOUNT: // 내정보
                 Log.d(TAG, "onItemSelected: POS_ACCOUNT");
                 startActivity(new Intent(this, ProfileActivity_v1.class));
                 break;
 
             // TODO: 2018-11-19 인슐린 설정은 여기서 ㄱㄱㄱㄱㄱㄱㄱ
-            case POS_MESSAGES:
+            case POS_MESSAGES: //액세서리
                 Log.d(TAG, "onItemSelected: POS_MESSAGES");
                 startActivity(new Intent(this, SelectDrugFirstActivity.class));
+                break;
+
+            case POS_CART: //교육
+                Log.d(TAG, "onItemSelected: POS_MESSAGES");
+                startActivity(new Intent(this, EduYoutubeActivity.class));
+                break;
+
+            case POS_SETTING: //교육
+                Log.d(TAG, "onItemSelected: POS_MESSAGES");
+                startActivity(new Intent(this, SettingActivity.class));
                 break;
 
             case POS_LOGOUT:

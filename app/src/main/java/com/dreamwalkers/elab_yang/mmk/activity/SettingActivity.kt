@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.dreamwalkers.elab_yang.mmk.R
 import com.dreamwalkers.elab_yang.mmk.activity.appinfos.DBManagementActivity
 import com.dreamwalkers.elab_yang.mmk.activity.appinfos.DeveloperActivity
+import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugFirstActivity
 import kotlinx.android.synthetic.main.activity_setting.*
 
 class SettingActivity : AppCompatActivity() {
@@ -22,6 +23,10 @@ class SettingActivity : AppCompatActivity() {
 
         developer_button.setOnClickListener {
             startActivity(Intent(this, DeveloperActivity::class.java))
+        }
+
+        drug_management_button.setOnClickListener {
+            startActivity(Intent(this, SelectDrugFirstActivity::class.java))
         }
 
     }

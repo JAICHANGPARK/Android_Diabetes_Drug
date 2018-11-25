@@ -33,20 +33,20 @@
         app:expandIconColor="@android:color/black"
         app:primaryColor="@color/white"
         app:selectedItem_background="@drawable/circle_white_solid_background"
-        app:selectedItem_textColor="@color/white"
+        app:selectedItem_textColor="@color/black"
         app:textColor="@color/black"
         app:todayItem_background="@drawable/circle_white_stroke_background"
         app:todayItem_textColor="@color/black" />
 
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/calendarView"
-        android:background="@color/lime"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="@color/black" />
+    <!--<TextView-->
+        <!--android:id="@+id/textview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/calendarView"-->
+        <!--android:background="@color/lime"-->
+        <!--android:gravity="center_vertical|center_horizontal"-->
+        <!--android:textColor="@color/black" />-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -56,6 +56,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/ella_tapbar"
-        android:layout_below="@+id/textview" />
+        android:layout_below="@+id/calendarView" />
 
 </RelativeLayout>

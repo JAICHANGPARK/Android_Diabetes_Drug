@@ -1,8 +1,6 @@
 package com.dreamwalkers.elab_yang.mmk.activity.fragment;
 
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,19 +12,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.dreamwalkers.elab_yang.mmk.R;
-import com.dreamwalkers.elab_yang.mmk.activity.ProfileActivity_v1;
-import com.dreamwalkers.elab_yang.mmk.activity.SelectDrugFirstActivity;
 import com.dreamwalkers.elab_yang.mmk.adapter.MyRecyclerAdapter;
-import com.dreamwalkers.elab_yang.mmk.adapter.appinfo.ProfileAdapter;
 import com.dreamwalkers.elab_yang.mmk.model.CardItem;
-import com.dreamwalkers.elab_yang.mmk.model.Profile;
 import com.shrikanthravi.collapsiblecalendarview.data.Day;
 import com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.content.Context.MODE_PRIVATE;
 import static android.support.constraint.Constraints.TAG;
 
 public class FragmentB extends Fragment {
@@ -47,7 +40,7 @@ public class FragmentB extends Fragment {
 //        calendar_view.getDate();
 
         calendarView = (CollapsibleCalendar) view.findViewById(R.id.calendarView);
-        textview = (TextView) view.findViewById(R.id.textview);
+//        textview = (TextView) view.findViewById(R.id.textview);
 
         recyclerview = (RecyclerView) view.findViewById(R.id.recycler_view);
         setRecyclerView();
@@ -60,7 +53,7 @@ public class FragmentB extends Fragment {
                 Log.d(TAG, "onDaySelect: 날짜 선택 = "
                         + day.getYear() + "/" + (day.getMonth() + 1) + "/" + day.getDay());
 
-                textview.setText((day.getYear() + "/" + (day.getMonth() + 1) + "/" + day.getDay()).toString());
+//                textview.setText((day.getYear() + "/" + (day.getMonth() + 1) + "/" + day.getDay()).toString());
             }
 
             @Override
@@ -98,7 +91,9 @@ public class FragmentB extends Fragment {
         List<CardItem> cardItems = new ArrayList<>();
 
         // TODO: 2018-11-23 시간은 date로 형식변경하자!!!!!!!!!!!!!!
-        cardItems.add(new CardItem(R.mipmap.injection, "15시 30분", "2", "3", "4", "5", R.mipmap.bae));  // 신체정보
+        cardItems.add(new CardItem(R.mipmap.injection, "6시 30분", "2", "휴물린", "10", "5", R.mipmap.blue));  // 신체정보
+        cardItems.add(new CardItem(R.mipmap.injection, "11시 30분", "2", "휴물린", "10", "5", R.mipmap.blue));  // 신체정보
+        cardItems.add(new CardItem(R.mipmap.injection, "5시 30분", "2", "휴물린", "15", "5", R.mipmap.blue));  // 신체정보
 
         MyRecyclerAdapter mHistoryItems = new MyRecyclerAdapter(cardItems);
         recyclerview.setAdapter(mHistoryItems);

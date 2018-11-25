@@ -48,18 +48,18 @@ public class FragmentA extends Fragment implements DashboardAdapter.DashboardCli
         dashboards.add(new Dashboard(3));
 
         // 지난 7일간의 내역
-        dashboards.add(new Dashboard("지난 7일간의 내역 title",
-                "지난 7일간의 내역 content\n" + "18. 11. 23. 00:00 휴머로그 3단위 투여\n"));
+        dashboards.add(new Dashboard("지난 7일간의 내역",
+                "지난 7일간의 내역 content\n" + "18. 11. 23. 00:00 휴마로그 10단위 투여\n"));
 
         // 혈당 관리 - 좀 세부화해야겠는데?
-        dashboards.add(new Dashboard("혈당 관리 title", "혈당 관리 content"));
+        dashboards.add(new Dashboard("혈당 관리", "목표혈당구간을 잘 유지하고 있습니다."));
 
         // 알림 시간 설정
-        dashboards.add(new Dashboard("알림 시간 설정 Title"
+        dashboards.add(new Dashboard("알림 시간 설정"
                 , "Content \n" + "아침 : 07:00 알림\n" + "점심 : 12:00 알림\n" + "..."));
 
         // 총 투약 횟수
-        dashboards.add(new Dashboard("총 투약 횟수 Title"
+        dashboards.add(new Dashboard("총 투약 횟수"
                 , "Content \n" + "11월달 23일 / 30일\n" + "연속 23일째 투약 중"));
 
         DashboardAdapter mDashboardItems = new DashboardAdapter(dashboards);

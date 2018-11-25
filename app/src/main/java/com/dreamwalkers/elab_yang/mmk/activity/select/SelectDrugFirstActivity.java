@@ -1,10 +1,8 @@
-package com.dreamwalkers.elab_yang.mmk.activity;
+package com.dreamwalkers.elab_yang.mmk.activity.select;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -24,21 +22,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dreamwalkers.elab_yang.mmk.R;
-import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugActivity;
-import com.dreamwalkers.elab_yang.mmk.adapter.MyRecyclerAdapter;
+import com.dreamwalkers.elab_yang.mmk.activity.IActivityBased;
 import com.dreamwalkers.elab_yang.mmk.adapter.appinfo.TimePointAdapter;
-import com.dreamwalkers.elab_yang.mmk.model.CardItem;
 import com.dreamwalkers.elab_yang.mmk.model.Imsi;
 import com.dreamwalkers.elab_yang.mmk.model.TimePoint;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class SelectDrugFirstActivity extends AppCompatActivity implements IActivityBased, TimePointAdapter.TimePointClickListener {
     private static final String TAG = "SelectDrugFirstActivity";

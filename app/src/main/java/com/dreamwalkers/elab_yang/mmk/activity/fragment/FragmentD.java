@@ -29,15 +29,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.dreamwalkers.elab_yang.mmk.R;
-import com.dreamwalkers.elab_yang.mmk.activity.IActivityBased;
 import com.dreamwalkers.elab_yang.mmk.activity.ProfileActivity_v1;
-import com.dreamwalkers.elab_yang.mmk.activity.SelectDrugFirstActivity;
-import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugActivity;
-import com.dreamwalkers.elab_yang.mmk.activity.sync.needle.v1.ReceiveDataActivity;
+import com.dreamwalkers.elab_yang.mmk.activity.select.SelectDrugFirstActivity;
 import com.dreamwalkers.elab_yang.mmk.adapter.appinfo.ProfileAdapter;
 import com.dreamwalkers.elab_yang.mmk.model.Profile;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
