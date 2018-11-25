@@ -233,6 +233,7 @@ public class SelectDrugFirstActivity extends AppCompatActivity implements IActiv
                     // 리스트 갯수만큼 반복
 
                     for (int i = 0; i < timepoints.size(); i++) {
+
 //                        set_data[i] = timepoints.get(i).getTimepoint() + "/" + timepoints.get(i).getName() + "/" + timepoints.get(i).getUnit() + "\n";
 //                        set_data[i] = timepoints.get(i).getTimepoint() + "/" + timepoints.get(i).getName() + "/" + timepoints.get(i).getUnit() + "\n";
                         Log.d(TAG, "onOptionsItemSelected: set_data[i] = " + set_data[i]);
@@ -263,7 +264,7 @@ public class SelectDrugFirstActivity extends AppCompatActivity implements IActiv
                                         Log.d(TAG, "setData = " + finalMessage);
                                         editor.apply();
 //                                        finish();
-                                        Snackbar.make(getWindow().getDecorView().getRootView(), "저장햇슴돠", Snackbar.LENGTH_SHORT).show();
+                                        Snackbar.make(getWindow().getDecorView().getRootView(), "저장했습니다.", Snackbar.LENGTH_SHORT).show();
                                         finish();
                                     });
                     builder.create()

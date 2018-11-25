@@ -72,7 +72,12 @@ public class FragmentD extends Fragment implements ProfileAdapter.ProfileClickLi
 
         } else {
             Log.d(TAG, "setAdapter: 띠용 ");
-            textView.setText(pref.getString("user_data0", ""));
+            if (pref.getString("user_data0", "") == null){
+                textView.setText("");
+            }else {
+                textView.setText(pref.getString("user_data0", ""));
+            }
+           
         }
 
         // 1
